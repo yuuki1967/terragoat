@@ -14,6 +14,7 @@ jobs:
         run: mkdir -p results-dir
       - name: Run KICS Scan with SARIF result
         uses: checkmarx/kics-github-action@v1.6
+        continue-on-error: true
         with:
           path: 'terraform'
           # when provided with a directory on output_path
